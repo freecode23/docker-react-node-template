@@ -44,7 +44,7 @@ services:
     ports:
       - '3050:80'
 
-  # B. DB
+  # D. DB
   sql:
     # get image from docker hub
     image: mysql
