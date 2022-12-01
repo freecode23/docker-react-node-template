@@ -25,12 +25,14 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./client
+      args:
+        - REACT_APP_GOOGLE_API=reactapi
     volumes:
       - /app/node_modules
       - ./client:/app
     environment:
       - WDS_SOCKET_PORT=0
-      - REACT_APP_GOOGLE_API=reactapi
+    
 
   # C. NGINX
   nginx:
