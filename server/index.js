@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 app.use(cors())
 
-
+console.log("backend env=", process.env.SERP_API);
 app.get('/', (req, res) => {
     // access from browser on http://localhost:3050/api/
     res.send('Hi There')
