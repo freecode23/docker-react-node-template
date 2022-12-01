@@ -15,9 +15,12 @@ COPY . .
 COPY create-env-file.sh ./create-env-file.sh
 
 
-# 6. env argument
+# 6. env argument that will be injected from docker-compose
 ARG REACT_APP_GOOGLE_API
+
+# - create env variable with the injected argument from docker compose
 RUN sh create-env-file.sh REACT_APP_GOOGLE_API=$REACT_APP_GOOGLE_API
+
 # debug
 CMD ["cat", ".env"]
 
