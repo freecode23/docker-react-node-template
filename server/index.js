@@ -12,6 +12,11 @@ app.get('/', (req, res) => {
     res.send('Hi There')
 });
 
+app.get('/values', (req, res) => {
+    // access from browser on http://localhost:3050/api/values
+    res.send('This is a value')
+});
+
 
 const PORT_CONTAINER = 3001
 const PORT = process.env.PORT || PORT_CONTAINER
