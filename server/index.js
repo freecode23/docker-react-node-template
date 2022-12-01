@@ -8,6 +8,7 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
+    // access from browser on http://localhost:3050/api/
     res.send('Hi There')
 });
 
@@ -15,5 +16,6 @@ app.get('/', (req, res) => {
 const PORT_CONTAINER = 3001
 const PORT = process.env.PORT || PORT_CONTAINER
 app.listen(PORT, function () {
-    console.log(`Running on port ${PORT_CONTAINER}`)
+    // display port number on container:
+    console.log(`Running on port ${PORT}`)
 })
