@@ -12,5 +12,5 @@ RUN npm install -g npm@9.1.3
 
 # 5. copy all current dir to container
 COPY . .
-# CMD ["npm", "run", "start"] 
-CMD ["npm", "run", "build"] 
+CMD ["npm", "run", "start"] 
+# CMD ["npm", "run", "build"] 
